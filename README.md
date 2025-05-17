@@ -21,7 +21,7 @@
 - [X] Methods  
 - [X] Interfaces  
 - [X] Enums  
-- [ ] Struct Embedding  
+- [X] Struct Embedding  
 - [ ] Generics  
 - [ ] Range over Iterators  
 - [ ] Errors  
