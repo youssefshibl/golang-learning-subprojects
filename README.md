@@ -22,8 +22,8 @@
 - [X] Interfaces  
 - [X] Enums  
 - [X] Struct Embedding  
-- [ ] Generics  
-- [ ] Range over Iterators  
+- [X] Generics  
+- [X] Range over Iterators  
 - [ ] Errors  
 - [ ] Custom Errors  
 - [ ] Goroutines  
