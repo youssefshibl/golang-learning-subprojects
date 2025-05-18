@@ -89,3 +89,5 @@
 
 - [x] [Iterators in Go ](https://bitfieldconsulting.com/posts/iterators)
 - [x] [How To Use JSON in Go ](https://www.digitalocean.com/community/tutorials/how-to-use-json-in-go#parsing-json-using-a-struct) 
+- [X][A concise guide to error handling in Go
+](https://medium.com/@andreiboar/a-concise-guide-to-error-handling-in-go-611a42e589ad)
