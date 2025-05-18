@@ -24,7 +24,7 @@
 - [X] Struct Embedding  
 - [X] Generics  
 - [X] Range over Iterators  
-- [ ] Errors  
+- [X] Errors  
 - [ ] Custom Errors  
 - [ ] Goroutines  
 - [ ] Channels  
