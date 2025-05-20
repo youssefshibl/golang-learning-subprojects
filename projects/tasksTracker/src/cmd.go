@@ -1,7 +1,7 @@
 package src
 
 import (
-	"errors"
+	"fmt"
 	"strconv"
 
 	"github.com/spf13/cobra"
@@ -24,97 +24,75 @@ Complete code available at https://github.com/arikchakma/backend-projects`,
 	cmd.AddCommand(UpdateDesCMD())
 
 	return cmd
-
 }
 
 func NewTaskCMD() *cobra.Command {
-	cmd := &cobra.Command{
-		Use:   "add",
+	return &cobra.Command{
+		Use:   "add [description]",
 		Short: "Add a task to the task list",
+		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if len(args) == 0 {
-				return errors.New("task description is required")
-			}
-
 			return AddTask(args[0])
-
 		},
 	}
-	return cmd
 }
 
 func DeleteTaskCMD() *cobra.Command {
-	cmd := &cobra.Command{
-		Use:   "delete",
-		Short: "delete a task from the task list",
+	return &cobra.Command{
+		Use:   "delete [id]",
+		Short: "Delete a task from the task list",
+		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if len(args) == 0 {
-				return errors.New("task id is required")
-			}
-
-			taskIDInt, err := strconv.ParseInt(args[0], 10, 32)
+			taskID, err := strconv.ParseInt(args[0], 10, 64)
 			if err != nil {
-				return err
+				return fmt.Errorf("invalid task ID: %w", err)
 			}
-			return DeleteTask(taskIDInt)
-
+			return DeleteTask(taskID)
 		},
 	}
-	return cmd
 }
 
 func ListAllTasksCMD() *cobra.Command {
-
-	cmd := &cobra.Command{
-		Use:   "list",
-		Short: "list all tasks",
+	return &cobra.Command{
+		Use:   "list [status]",
+		Short: "List all tasks (optionally filtered by status)",
+		Args:  cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if len(args) > 0 {
-				return ListAllTasks(TaskStatus(args[0]))
+			status := "All"
+			if len(args) == 1 {
+				status = args[0]
 			}
-			return ListAllTasks("All")
-
+			return ListAllTasks(TaskStatus(status))
 		},
 	}
-	return cmd
 }
 
 func UpdateStatusCMD() *cobra.Command {
-
-	cmd := &cobra.Command{
-		Use:   "updateStatus",
-		Short: "update status of task by id",
+	return &cobra.Command{
+		Use:   "updateStatus [id] [status]",
+		Short: "Update the status of a task by ID",
+		Args:  cobra.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if len(args) < 1 {
-				return ListAllTasks(TaskStatus(args[0]))
-			}
-			taskIDInt, err := strconv.ParseInt(args[0], 10, 32)
+			taskID, err := strconv.ParseInt(args[0], 10, 64)
 			if err != nil {
-				return err
+				return fmt.Errorf("invalid task ID: %w", err)
 			}
-			return UpdateTaskStatus(taskIDInt, TaskStatus(args[1]))
-
+			return UpdateTaskStatus(taskID, TaskStatus(args[1]))
 		},
 	}
-	return cmd
 }
 
 func UpdateDesCMD() *cobra.Command {
-
-	cmd := &cobra.Command{
-		Use:   "updateDes",
-		Short: "update description of task by id",
+	return &cobra.Command{
+		Use:   "updateDes [id] [new description]",
+		Short: "Update the description of a task by ID",
+		Args:  cobra.ExactArgs(2),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			if len(args) < 1 {
-				return ListAllTasks(TaskStatus(args[0]))
-			}
-			taskIDInt, err := strconv.ParseInt(args[0], 10, 32)
+			taskID, err := strconv.ParseInt(args[0], 10, 64)
 			if err != nil {
-				return err
+				return fmt.Errorf("invalid task ID: %w", err)
 			}
-			return UpdateTaskSDescription(taskIDInt, args[1])
-
+			return UpdateTaskSDescription(taskID, args[1])
 		},
 	}
-	return cmd
 }

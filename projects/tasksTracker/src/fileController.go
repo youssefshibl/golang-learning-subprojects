@@ -5,78 +5,79 @@ import (
 	"errors"
 	"fmt"
 	"os"
-	"path"
+	"path/filepath"
 )
+
+var taskFileName = "tasks.json"
 
 func getCurrentPath() string {
 	cwd, err := os.Getwd()
 	if err != nil {
-		fmt.Println("Error current directory:", err)
+		fmt.Println("Error getting current directory:", err)
+		return ""
 	}
-	return path.Join(cwd, string(TaskFileName))
+	return filepath.Join(cwd, taskFileName)
 }
 
-type makeEmptyFileArgs struct {
+type fileInitArgs struct {
 	filePath       string
 	initialContent string
 }
 
-func makeEmptyFile(m makeEmptyFileArgs) {
-	content := []byte(m.initialContent)
-	f, err := os.Create(m.filePath)
-	if err != nil {
-		fmt.Print(err)
-	} else {
-		os.WriteFile(m.filePath, content, os.ModeAppend.Perm())
+func createFileWithContent(args fileInitArgs) error {
+	if err := os.WriteFile(args.filePath, []byte(args.initialContent), 0644); err != nil {
+		return fmt.Errorf("failed to create file with content: %w", err)
 	}
-	f.Close()
-
+	return nil
 }
 
-func ReadTasskFromFile() ([]Task, error) {
-	path := getCurrentPath()
-	if _, err := os.Stat(path); err != nil {
-		if errors.Is(err, os.ErrNotExist) {
-			fmt.Printf("%s file not exist ... will create it ... \n", TaskFileName)
-			makeEmptyFile(makeEmptyFileArgs{filePath: path, initialContent: "[]"})
-			return []Task{}, nil
+// ReadTasksFromFile loads tasks from the JSON file, or creates it if missing.
+func ReadTasksFromFile() ([]Task, error) {
+	filePath := getCurrentPath()
+	if filePath == "" {
+		return nil, errors.New("could not determine task file path")
+	}
 
-		} else {
-			fmt.Println(err)
-			return nil, err
+	if _, err := os.Stat(filePath); errors.Is(err, os.ErrNotExist) {
+		fmt.Printf("%s does not exist. Creating it...\n", taskFileName)
+		if err := createFileWithContent(fileInitArgs{filePath: filePath, initialContent: "[]"}); err != nil {
+			return nil, fmt.Errorf("failed to initialize task file: %w", err)
 		}
+		return []Task{}, nil
+	} else if err != nil {
+		return nil, fmt.Errorf("error checking file status: %w", err)
 	}
 
-	file, err := os.Open(path)
+	file, err := os.Open(filePath)
 	if err != nil {
-		fmt.Println(err)
+		return nil, fmt.Errorf("failed to open task file: %w", err)
 	}
-	tasks := []Task{}
-	err = json.NewDecoder(file).Decode(&tasks)
-	if err != nil {
-		fmt.Println("Error decoding file:", err)
-		return nil, err
-	}
-	return tasks, nil
-
-}
-
-func WriteTasksToFile(tasks []Task) (bool, error) {
-	path := getCurrentPath()
-	file, err := os.Create(path)
-	if err != nil {
-		fmt.Println("Error when try to make file ", err)
-		return false, err
-	}
-	// closed file after function execute
 	defer file.Close()
 
-	err = json.NewEncoder(file).Encode(tasks)
+	var tasks []Task
+	if err := json.NewDecoder(file).Decode(&tasks); err != nil {
+		return nil, fmt.Errorf("failed to decode task data: %w", err)
+	}
+
+	return tasks, nil
+}
+
+// WriteTasksToFile saves the tasks to the JSON file.
+func WriteTasksToFile(tasks []Task) (bool, error) {
+	filePath := getCurrentPath()
+	if filePath == "" {
+		return false, errors.New("could not determine task file path")
+	}
+
+	file, err := os.Create(filePath)
 	if err != nil {
-		fmt.Println("Error when try to write in file ", err)
-		return false, err
+		return false, fmt.Errorf("failed to create task file: %w", err)
+	}
+	defer file.Close()
+
+	if err := json.NewEncoder(file).Encode(tasks); err != nil {
+		return false, fmt.Errorf("failed to encode tasks to file: %w", err)
 	}
 
 	return true, nil
-
 }

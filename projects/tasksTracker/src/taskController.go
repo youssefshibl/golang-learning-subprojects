@@ -18,7 +18,7 @@ func MakeNewTask(id int64, desc string) *Task {
 }
 
 func AddTask(desc string) error {
-	tasks, err := ReadTasskFromFile()
+	tasks, err := ReadTasksFromFile()
 	if err != nil {
 		return err
 	}
@@ -46,7 +46,7 @@ func AddTask(desc string) error {
 }
 
 func DeleteTask(id int64) error {
-	tasks, err := ReadTasskFromFile()
+	tasks, err := ReadTasksFromFile()
 	if err != nil {
 		return err
 	}
@@ -70,7 +70,7 @@ func DeleteTask(id int64) error {
 }
 
 func UpdateTaskStatus(id int64, status TaskStatus) error {
-	tasks, err := ReadTasskFromFile()
+	tasks, err := ReadTasksFromFile()
 	if err != nil {
 		return err
 	}
@@ -95,7 +95,7 @@ func UpdateTaskStatus(id int64, status TaskStatus) error {
 }
 
 func UpdateTaskSDescription(id int64, desc string) error {
-	tasks, err := ReadTasskFromFile()
+	tasks, err := ReadTasksFromFile()
 	if err != nil {
 		return err
 	}
@@ -120,7 +120,7 @@ func UpdateTaskSDescription(id int64, desc string) error {
 }
 
 func ListAllTasks(status TaskStatus) error {
-	tasks, err := ReadTasskFromFile()
+	tasks, err := ReadTasksFromFile()
 	if err != nil {
 		return err
 	}
