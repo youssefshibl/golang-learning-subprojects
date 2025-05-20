@@ -26,18 +26,18 @@
 - [x] Generics
 - [x] Range over Iterators
 - [x] Errors
-- [ ] Custom Errors
-- [ ] Goroutines
-- [ ] Channels
-- [ ] Channel Buffering
-- [ ] Channel Synchronization
-- [ ] Channel Directions
-- [ ] Select
-- [ ] Timeouts
-- [ ] Non-Blocking Channel Operations
-- [ ] Closing Channels
-- [ ] Range over Channels
-- [ ] Timers
+- [X] Custom Errors
+- [X] Goroutines
+- [X] Channels
+- [X] Channel Buffering
+- [X] Channel Synchronization
+- [X] Channel Directions
+- [X] Select
+- [X] Timeouts
+- [X] Non-Blocking Channel Operations
+- [X] Closing Channels
+- [X] Range over Channels
+- [X] Timers
 - [ ] Tickers
 - [ ] Worker Pools
 - [ ] WaitGroups

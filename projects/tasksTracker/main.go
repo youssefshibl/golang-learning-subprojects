@@ -1,8 +1,11 @@
 package main
 
-import "taskTrackes/src"
+import (
+	"taskTrackes/src"
+)
 
 func main() {
-	// cmd.Execute()
-	src.TestFileController()
+
+	rootCmd := src.Root()
+	rootCmd.Execute()
 }

@@ -33,7 +33,7 @@ func makeEmptyFile(m makeEmptyFileArgs) {
 
 }
 
-func ReadTaskFromFile() ([]Task, error) {
+func ReadTasskFromFile() ([]Task, error) {
 	path := getCurrentPath()
 	if _, err := os.Stat(path); err != nil {
 		if errors.Is(err, os.ErrNotExist) {
@@ -45,26 +45,38 @@ func ReadTaskFromFile() ([]Task, error) {
 			fmt.Println(err)
 			return nil, err
 		}
-	} else {
-
-		file, err := os.Open(path)
-		if err != nil {
-			fmt.Println(err)
-		}
-		tasks := []Task{}
-		err = json.NewDecoder(file).Decode(&tasks)
-		fmt.Print((tasks))
-		if err != nil {
-			fmt.Println("Error decoding file:", err)
-			return nil, err
-		}
-		return tasks, nil
-
 	}
+
+	file, err := os.Open(path)
+	if err != nil {
+		fmt.Println(err)
+	}
+	tasks := []Task{}
+	err = json.NewDecoder(file).Decode(&tasks)
+	if err != nil {
+		fmt.Println("Error decoding file:", err)
+		return nil, err
+	}
+	return tasks, nil
 
 }
 
-func TestFileController() {
-	ReadTaskFromFile()
+func WriteTasksToFile(tasks []Task) (bool, error) {
+	path := getCurrentPath()
+	file, err := os.Create(path)
+	if err != nil {
+		fmt.Println("Error when try to make file ", err)
+		return false, err
+	}
+	// closed file after function execute
+	defer file.Close()
+
+	err = json.NewEncoder(file).Encode(tasks)
+	if err != nil {
+		fmt.Println("Error when try to write in file ", err)
+		return false, err
+	}
+
+	return true, nil
 
 }

@@ -5,6 +5,7 @@ type TaskStatus string
 const (
 	Done    TaskStatus = "Done"
 	Pending TaskStatus = "Pending"
+	Todo    TaskStatus = "Todo"
 )
 
 type CommandActions string

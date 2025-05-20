@@ -3,9 +3,9 @@ package src
 import "time"
 
 type Task struct {
-	id        uint64
-	desc      string
-	status    TaskStatus
-	createdAt time.Time
-	updatedAt time.Time
+	Id        int64      `json:"id"`
+	Desc      string     `json:"description"`
+	Status    TaskStatus `json:"status"`
+	CreatedAt time.Time  `json:"createdAt"`
+	UpdatedAt time.Time  `json:"updatedAt"`
 }
