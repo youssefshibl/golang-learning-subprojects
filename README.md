@@ -26,29 +26,29 @@
 - [x] Generics
 - [x] Range over Iterators
 - [x] Errors
-- [X] Custom Errors
-- [X] Goroutines
-- [X] Channels
-- [X] Channel Buffering
-- [X] Channel Synchronization
-- [X] Channel Directions
-- [X] Select
-- [X] Timeouts
-- [X] Non-Blocking Channel Operations
-- [X] Closing Channels
-- [X] Range over Channels
-- [X] Timers
-- [X] Tickers
-- [X] Worker Pools
-- [X] WaitGroups
-- [X] Rate Limiting
-- [X] Atomic Counters
-- [X] Mutexes
-- [X] Stateful Goroutines
-- [X] Sorting
-- [X] Sorting by Functions
-- [X] Panic
-- [X] Defer
+- [x] Custom Errors
+- [x] Goroutines
+- [x] Channels
+- [x] Channel Buffering
+- [x] Channel Synchronization
+- [x] Channel Directions
+- [x] Select
+- [x] Timeouts
+- [x] Non-Blocking Channel Operations
+- [x] Closing Channels
+- [x] Range over Channels
+- [x] Timers
+- [x] Tickers
+- [x] Worker Pools
+- [x] WaitGroups
+- [x] Rate Limiting
+- [x] Atomic Counters
+- [x] Mutexes
+- [x] Stateful Goroutines
+- [x] Sorting
+- [x] Sorting by Functions
+- [x] Panic
+- [x] Defer
 - [ ] Recover
 - [ ] String Functions
 - [ ] String Formatting
@@ -85,12 +85,11 @@
 - [ ] Signals
 - [ ] Exit
 
-
-# Gophercises Progress 
+# Gophercises Progress
 
 A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes to track your progress:
 
-- [ ] **Exercise 1: Quiz Game** – Create a command-line program that runs timed quizzes.
+- [x] [**Exercise 1: Quiz Game**](./projects/quizGame/README.md) – Create a command-line program that runs timed quizzes.
 - [ ] **Exercise 2: URL Shortener** – Build an HTTP handler that forwards paths to other URLs (similar to Bitly).
 - [ ] **Exercise 3: Choose Your Own Adventure** – Design a web application that renders a choose-your-own-adventure story.
 - [ ] **Exercise 4: HTML Link Parser** – Develop a package to parse `<a>` tags from an HTML file.
@@ -111,14 +110,13 @@ A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes 
 - [ ] **Exercise 19: Building Images (PNG & SVG)** – Generate PNG and SVG images programmatically.
 - [ ] **Exercise 20: Building PDFs** – Generate PDF documents programmatically.
 
-
 # other Sub-Projects
 
-- [X] [Task Tracker](./projects/tasksTracker/README.md)
+- [x] [Task Tracker](./projects/tasksTracker/README.md)
 
 ## ✅ Articles
 
 - [x] [Iterators in Go ](https://bitfieldconsulting.com/posts/iterators)
-- [x] [How To Use JSON in Go ](https://www.digitalocean.com/community/tutorials/how-to-use-json-in-go#parsing-json-using-a-struct) 
-- [X] [A concise guide to error handling in Go
-](https://medium.com/@andreiboar/a-concise-guide-to-error-handling-in-go-611a42e589ad)
+- [x] [How To Use JSON in Go ](https://www.digitalocean.com/community/tutorials/how-to-use-json-in-go#parsing-json-using-a-struct)
+- [x] [A concise guide to error handling in Go
+      ](https://medium.com/@andreiboar/a-concise-guide-to-error-handling-in-go-611a42e589ad)
