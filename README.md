@@ -1,4 +1,4 @@
-## ✅ Learning Go From `Go by Example` website
+## Learning Go From [`Go by Example`](https://gobyexample.com/) website
 
 - [x] Hello World
 - [x] Values
@@ -38,17 +38,17 @@
 - [X] Closing Channels
 - [X] Range over Channels
 - [X] Timers
-- [ ] Tickers
-- [ ] Worker Pools
-- [ ] WaitGroups
-- [ ] Rate Limiting
-- [ ] Atomic Counters
-- [ ] Mutexes
-- [ ] Stateful Goroutines
-- [ ] Sorting
-- [ ] Sorting by Functions
-- [ ] Panic
-- [ ] Defer
+- [X] Tickers
+- [X] Worker Pools
+- [X] WaitGroups
+- [X] Rate Limiting
+- [X] Atomic Counters
+- [X] Mutexes
+- [X] Stateful Goroutines
+- [X] Sorting
+- [X] Sorting by Functions
+- [X] Panic
+- [X] Defer
 - [ ] Recover
 - [ ] String Functions
 - [ ] String Formatting
@@ -85,9 +85,36 @@
 - [ ] Signals
 - [ ] Exit
 
+
+# Gophercises Progress 
+
+A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes to track your progress:
+
+- [ ] **Exercise 1: Quiz Game** – Create a command-line program that runs timed quizzes.
+- [ ] **Exercise 2: URL Shortener** – Build an HTTP handler that forwards paths to other URLs (similar to Bitly).
+- [ ] **Exercise 3: Choose Your Own Adventure** – Design a web application that renders a choose-your-own-adventure story.
+- [ ] **Exercise 4: HTML Link Parser** – Develop a package to parse `<a>` tags from an HTML file.
+- [ ] **Exercise 5: Sitemap Builder** – Utilize the HTML link parser to build a sitemap of public websites.
+- [ ] **Exercise 6: HackerRank Problem** – Solve a few string-related problems from HackerRank.
+- [ ] **Exercise 7: CLI Task Manager** – Create a command-line app to manage a TODO list stored in BoltDB.
+- [ ] **Exercise 8: Phone Number Normalizer** – Normalize phone numbers in an SQL table to a consistent format.
+- [ ] **Exercise 9: Deck of Cards** – Code a package to build, shuffle, and sort decks of cards.
+- [ ] **Exercise 10: Blackjack** – Using the deck of cards, create a blackjack game.
+- [ ] **Exercise 11: Blackjack AI** – Refactor the blackjack game into a package with an AI player.
+- [ ] **Exercise 12: File Renaming Tool** – Build a tool to rename files with a common pattern.
+- [ ] **Exercise 13: Quiet HN** – Enhance a Hacker News web app using concurrency and caching.
+- [ ] **Exercise 14: Recover Middleware** – Develop HTTP middleware that recovers from panics.
+- [ ] **Exercise 15: Recover Middleware w/ Source Code** – Add links to source code with syntax highlighting.
+- [ ] **Exercise 16: Twitter Retweet Contest CLI** – Create a CLI to manage a Twitter retweet contest.
+- [ ] **Exercise 17: Secrets API and CLI** – Build tools to store and retrieve encrypted secrets.
+- [ ] **Exercise 18: Image Transform Service** – Create a web server for image uploads and transformations.
+- [ ] **Exercise 19: Building Images (PNG & SVG)** – Generate PNG and SVG images programmatically.
+- [ ] **Exercise 20: Building PDFs** – Generate PDF documents programmatically.
+
+
 ## ✅ Articles
 
 - [x] [Iterators in Go ](https://bitfieldconsulting.com/posts/iterators)
 - [x] [How To Use JSON in Go ](https://www.digitalocean.com/community/tutorials/how-to-use-json-in-go#parsing-json-using-a-struct) 
-- [X][A concise guide to error handling in Go
+- [X] [A concise guide to error handling in Go
 ](https://medium.com/@andreiboar/a-concise-guide-to-error-handling-in-go-611a42e589ad)
