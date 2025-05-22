@@ -90,7 +90,7 @@
 A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes to track your progress:
 
 - [x] [**Exercise 1: Quiz Game**](./projects/quizGame/README.md) – Create a command-line program that runs timed quizzes.
-- [ ] **Exercise 2: URL Shortener** – Build an HTTP handler that forwards paths to other URLs (similar to Bitly).
+- [x] [**Exercise 2: URL Shortener**](./projects/URLShortener/README.md) – Build an HTTP handler that forwards paths to other URLs (similar to Bitly).
 - [ ] **Exercise 3: Choose Your Own Adventure** – Design a web application that renders a choose-your-own-adventure story.
 - [ ] **Exercise 4: HTML Link Parser** – Develop a package to parse `<a>` tags from an HTML file.
 - [ ] **Exercise 5: Sitemap Builder** – Utilize the HTML link parser to build a sitemap of public websites.
