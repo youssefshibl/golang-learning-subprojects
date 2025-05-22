@@ -49,12 +49,12 @@
 - [x] Sorting by Functions
 - [x] Panic
 - [x] Defer
-- [ ] Recover
-- [ ] String Functions
-- [ ] String Formatting
-- [ ] Text Templates
-- [ ] Regular Expressions
-- [ ] JSON
+- [X] Recover
+- [X] String Functions
+- [X] String Formatting
+- [X] Text Templates
+- [X] Regular Expressions
+- [X] JSON
 - [ ] XML
 - [ ] Time
 - [ ] Epoch
@@ -120,3 +120,4 @@ A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes 
 - [x] [How To Use JSON in Go ](https://www.digitalocean.com/community/tutorials/how-to-use-json-in-go#parsing-json-using-a-struct)
 - [x] [A concise guide to error handling in Go
       ](https://medium.com/@andreiboar/a-concise-guide-to-error-handling-in-go-611a42e589ad)
+- [x] [How To Make an HTTP Server in Go](https://www.digitalocean.com/community/tutorials/how-to-make-an-http-server-in-go#inspecting-a-request-s-query-string)
