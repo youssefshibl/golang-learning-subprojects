@@ -49,17 +49,17 @@
 - [x] Sorting by Functions
 - [x] Panic
 - [x] Defer
-- [X] Recover
-- [X] String Functions
-- [X] String Formatting
-- [X] Text Templates
-- [X] Regular Expressions
-- [X] JSON
-- [ ] XML
-- [ ] Time
-- [ ] Epoch
-- [ ] Time Formatting / Parsing
-- [ ] Random Numbers
+- [x] Recover
+- [x] String Functions
+- [x] String Formatting
+- [x] Text Templates
+- [x] Regular Expressions
+- [x] JSON
+- [x] XML
+- [x] Time
+- [x] Epoch
+- [x] Time Formatting / Parsing
+- [x] Random Numbers
 - [ ] Number Parsing
 - [ ] URL Parsing
 - [ ] SHA256 Hashes
@@ -91,7 +91,7 @@ A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes 
 
 - [x] [**Exercise 1: Quiz Game**](./projects/quizGame/README.md) – Create a command-line program that runs timed quizzes.
 - [x] [**Exercise 2: URL Shortener**](./projects/URLShortener/README.md) – Build an HTTP handler that forwards paths to other URLs (similar to Bitly).
-- [ ] **Exercise 3: Choose Your Own Adventure** – Design a web application that renders a choose-your-own-adventure story.
+- [x] [**Exercise 3: Choose Your Own Adventure**](./projects/cyoa/README.md) – Design a web application that renders a choose-your-own-adventure story.
 - [ ] **Exercise 4: HTML Link Parser** – Develop a package to parse `<a>` tags from an HTML file.
 - [ ] **Exercise 5: Sitemap Builder** – Utilize the HTML link parser to build a sitemap of public websites.
 - [ ] **Exercise 6: HackerRank Problem** – Solve a few string-related problems from HackerRank.

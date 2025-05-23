@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{.Title}}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 700px;
+        margin: auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #336699;
+      }
+      p {
+        margin-bottom: 1em;
+      }
+      ul {
+        padding-left: 1em;
+      }
+      li {
+        margin-bottom: 0.5em;
+      }
+      a {
+        text-decoration: none;
+        color: #2a7ae2;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{.Title}}</h1>
+
+    {{range .Story}}
+    <p>{{.}}</p>
+    {{end}}
+
+    <ul>
+      {{range .Options}}
+      <li><a href="/page?story={{.Arc}}">{{.Text}}</a></li>
+      {{end}}
+    </ul>
+  </body>
+</html>
