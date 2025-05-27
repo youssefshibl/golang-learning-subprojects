@@ -92,7 +92,8 @@ A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes 
 - [x] [**Exercise 1: Quiz Game**](./projects/quizGame/README.md) – Create a command-line program that runs timed quizzes.
 - [x] [**Exercise 2: URL Shortener**](./projects/URLShortener/README.md) – Build an HTTP handler that forwards paths to other URLs (similar to Bitly).
 - [x] [**Exercise 3: Choose Your Own Adventure**](./projects/cyoa/README.md) – Design a web application that renders a choose-your-own-adventure story.
-- [ ] **Exercise 4: HTML Link Parser** – Develop a package to parse `<a>` tags from an HTML file.
+- [X] [**Exercise 4: HTML Link Parser**](./projects/HTMLLinkParser/README.md
+) – Develop a package to parse `<a>` tags from an HTML file.
 - [ ] **Exercise 5: Sitemap Builder** – Utilize the HTML link parser to build a sitemap of public websites.
 - [ ] **Exercise 6: HackerRank Problem** – Solve a few string-related problems from HackerRank.
 - [ ] **Exercise 7: CLI Task Manager** – Create a command-line app to manage a TODO list stored in BoltDB.
