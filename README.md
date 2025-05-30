@@ -94,7 +94,7 @@ A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes 
 - [x] [**Exercise 3: Choose Your Own Adventure**](./projects/cyoa/README.md) – Design a web application that renders a choose-your-own-adventure story.
 - [X] [**Exercise 4: HTML Link Parser**](./projects/HTMLLinkParser/README.md
 ) – Develop a package to parse `<a>` tags from an HTML file.
-- [ ] **Exercise 5: Sitemap Builder** – Utilize the HTML link parser to build a sitemap of public websites.
+- [X] [**Exercise 5: Sitemap Builder**](./projects/SitemapBuilder/README.md) – Utilize the HTML link parser to build a sitemap of public websites.
 - [ ] **Exercise 6: HackerRank Problem** – Solve a few string-related problems from HackerRank.
 - [ ] **Exercise 7: CLI Task Manager** – Create a command-line app to manage a TODO list stored in BoltDB.
 - [ ] **Exercise 8: Phone Number Normalizer** – Normalize phone numbers in an SQL table to a consistent format.
