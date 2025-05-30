@@ -60,30 +60,30 @@
 - [x] Epoch
 - [x] Time Formatting / Parsing
 - [x] Random Numbers
-- [ ] Number Parsing
-- [ ] URL Parsing
-- [ ] SHA256 Hashes
-- [ ] Base64 Encoding
-- [ ] Reading Files
-- [ ] Writing Files
-- [ ] Line Filters
-- [ ] File Paths
-- [ ] Directories
-- [ ] Temporary Files and Directories
-- [ ] Embed Directive
-- [ ] Testing and Benchmarking
-- [ ] Command-Line Arguments
-- [ ] Command-Line Flags
-- [ ] Command-Line Subcommands
-- [ ] Environment Variables
-- [ ] Logging
-- [ ] HTTP Client
-- [ ] HTTP Server
-- [ ] Context
-- [ ] Spawning Processes
-- [ ] Exec'ing Processes
-- [ ] Signals
-- [ ] Exit
+- [X] Number Parsing
+- [X] URL Parsing
+- [X] SHA256 Hashes
+- [X] Base64 Encoding
+- [X] Reading Files
+- [X] Writing Files
+- [X] Line Filters
+- [X] File Paths
+- [X] Directories
+- [X] Temporary Files and Directories
+- [X] Embed Directive
+- [X] Testing and Benchmarking
+- [X] Command-Line Arguments
+- [X] Command-Line Flags
+- [X] Command-Line Subcommands
+- [X] Environment Variables
+- [X] Logging
+- [X] HTTP Client
+- [X] HTTP Server
+- [X] Context
+- [X] Spawning Processes
+- [X] Exec'ing Processes
+- [X] Signals
+- [X] Exit
 
 # Gophercises Progress
 
