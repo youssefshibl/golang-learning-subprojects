@@ -98,7 +98,7 @@ A list of all [Gophercises](https://gophercises.com/) exercises with checkboxes 
 - [X] **Exercise 6: HackerRank Problem** – Solve a few string-related problems from HackerRank.
 - [X] [**Exercise 7: CLI Task Manager**](./projects/tasksTracker/README.md) – Create a command-line app to manage a TODO list stored in BoltDB.
 - [X] [**Exercise 8: Phone Number Normalizer**](./projects/PhoneNumberNormalizer/README.md) – Normalize phone numbers in an SQL table to a consistent format.
-- [ ] **Exercise 9: Deck of Cards** – Code a package to build, shuffle, and sort decks of cards.
+- [X] [**Exercise 9: Deck of Cards**](./projects/DeckOfCards/README.md) – Code a package to build, shuffle, and sort decks of cards.
 - [ ] **Exercise 10: Blackjack** – Using the deck of cards, create a blackjack game.
 - [ ] **Exercise 11: Blackjack AI** – Refactor the blackjack game into a package with an AI player.
 - [ ] **Exercise 12: File Renaming Tool** – Build a tool to rename files with a common pattern.
